@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
-import colors from "../config/colors";
+import { View, StyleSheet, Image } from "react-native";
+
 import AppText from "./AppText";
+import colors from "../config/colors";
+
 function Card({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
@@ -13,6 +15,7 @@ function Card({ title, subTitle, image }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   detailsContainer: {
-    padding: 10,
+    padding: 20,
   },
   image: {
     width: "100%",
@@ -35,4 +38,5 @@ const styles = StyleSheet.create({
     marginBottom: 7,
   },
 });
+
 export default Card;
