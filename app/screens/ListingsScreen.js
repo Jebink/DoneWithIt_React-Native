@@ -20,7 +20,7 @@ function ListingsScreen({ navigation }) {
 
   return (
     <Screen style={styles.screen}>
-      {getListingsApi.error && (
+      {getListingsApi.error && !getListingsApi.loading && (
         <>
           <View style={styles.errorContainer}>
             <AppText style={styles.error}>
@@ -31,18 +31,20 @@ function ListingsScreen({ navigation }) {
         </>
       )}
       <ActivityIndicator visible={getListingsApi.loading} />
-      <FlatList
-        data={getListingsApi.data}
-        keyExtractor={(listing) => listing.id.toString()}
-        renderItem={({ item }) => (
-          <Card
-            title={item.title}
-            subTitle={"$" + item.price}
-            imageUrl={item.images[0].url}
-            onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
-          />
-        )}
-      />
+      {!getListingsApi.loading && !getListingsApi.error && (
+        <FlatList
+          data={getListingsApi.data}
+          keyExtractor={(listing) => listing.id.toString()}
+          renderItem={({ item }) => (
+            <Card
+              title={item.title}
+              subTitle={"$" + item.price}
+              imageUrl={item.images[0].url}
+              onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
+            />
+          )}
+        />
+      )}
     </Screen>
   );
 }
