@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {
-  View,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  Modal,
   Button,
   FlatList,
+  Modal,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
