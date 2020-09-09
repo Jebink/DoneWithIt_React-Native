@@ -4,6 +4,7 @@ import ImageInput from "./ImageInput";
 
 function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
   const scrollView = useRef();
+
   return (
     <View>
       <ScrollView
@@ -26,6 +27,7 @@ function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
@@ -34,4 +36,5 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
+
 export default ImageInputList;

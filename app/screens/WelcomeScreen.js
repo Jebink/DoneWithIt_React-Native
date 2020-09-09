@@ -23,7 +23,7 @@ function WelcomeScreen({ navigation }) {
         <Button
           title="Register"
           color="secondary"
-          onPress={() => navigation.navigate("Register")}
+          onPress={() => navigation.navigate(routes.REGISTER)}
         />
       </View>
     </ImageBackground>
