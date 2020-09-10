@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 
 import ActivityIndicator from "../components/ActivityIndicator";
 import Button from "../components/Button";
@@ -69,5 +69,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-
 export default ListingsScreen;

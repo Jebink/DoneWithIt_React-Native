@@ -15,6 +15,7 @@ function ActivityIndicator({ visible = false }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   overlay: {
     position: "absolute",
@@ -25,4 +26,5 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
 });
+
 export default ActivityIndicator;
